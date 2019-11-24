@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactPlayer from "react-player";
+import { navigate } from "@reach/router";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="player-wrapper">
+        <ReactPlayer
+          className="react-player"
+          url="https://www.youtube.com/embed/-ihORv-FaPY"
+          playing
+          onEnded={() =>
+            navigate(
+              "https://www.clickfam.com/cl.php?id=0ef1f254c9bb1110fe2aa9b805293881"
+            )
+          }
+          width="100%"
+          height="100%"
+        />
+      </div>
     </div>
   );
 }

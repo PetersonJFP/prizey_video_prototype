@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -19,4 +20,15 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.player-wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
